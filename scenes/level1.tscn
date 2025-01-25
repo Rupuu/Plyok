@@ -65,5 +65,5 @@ position = Vector2(214, 82)
 scale = Vector2(0.75, 0.75)
 
 [node name="Bubble3" parent="." instance=ExtResource("3_1w46a")]
-position = Vector2(124, -137)
+position = Vector2(92, -166)
 scale = Vector2(0.5, 0.5)

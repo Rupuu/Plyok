@@ -99,16 +99,18 @@ radius = 30.1496
 
 [node name="Bubble" type="CharacterBody2D"]
 input_pickable = true
+motion_mode = 1
 script = ExtResource("1_inmyy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(3, 2)
+position = Vector2(3, -1)
 scale = Vector2(0.324, 0.324)
 sprite_frames = SubResource("SpriteFrames_t3gr1")
-animation = &"pop"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+top_level = true
 position = Vector2(2, 3)
 shape = SubResource("CircleShape2D_dm2nv")
 

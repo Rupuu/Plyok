@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crhi4icl2du43"
-path="res://.godot/imported/Spurt_strip.png-0b2c5ee059abd4b298b0178a56c87b40.ctex"
+path="res://.godot/imported/Spurt_strip.png-617768995802d55b9fb9dd88c60a0feb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/weapon-sprites/Spurt_strip.png"
-dest_files=["res://.godot/imported/Spurt_strip.png-0b2c5ee059abd4b298b0178a56c87b40.ctex"]
+source_file="res://assets/sprites/weapon-sprites/Spurt_strip.png"
+dest_files=["res://.godot/imported/Spurt_strip.png-617768995802d55b9fb9dd88c60a0feb.ctex"]
 
 [params]
 

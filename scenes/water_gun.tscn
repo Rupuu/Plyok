@@ -1,9 +1,9 @@
 [gd_scene load_steps=39 format=3 uid="uid://dlyxvs2hkjynk"]
 
 [ext_resource type="Script" path="res://scripts/water_gun.gd" id="1_60lgm"]
-[ext_resource type="Texture2D" uid="uid://duwka1v7h3fq1" path="res://assets/weapon-sprites/weaponsprite.png" id="2_r6y6g"]
-[ext_resource type="Texture2D" uid="uid://bcc65tnfjlm6x" path="res://assets/weapon-sprites/Water_spray_strip15.png" id="4_8qj3v"]
-[ext_resource type="Texture2D" uid="uid://crhi4icl2du43" path="res://assets/weapon-sprites/Spurt_strip.png" id="4_a1sg3"]
+[ext_resource type="Texture2D" uid="uid://duwka1v7h3fq1" path="res://assets/sprites/weapon-sprites/weaponsprite.png" id="2_r6y6g"]
+[ext_resource type="Texture2D" uid="uid://bcc65tnfjlm6x" path="res://assets/sprites/weapon-sprites/Water_spray_strip15.png" id="4_8qj3v"]
+[ext_resource type="Texture2D" uid="uid://crhi4icl2du43" path="res://assets/sprites/weapon-sprites/Spurt_strip.png" id="4_a1sg3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a5wgd"]
 atlas = ExtResource("2_r6y6g")

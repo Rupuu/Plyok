@@ -1,6 +1,7 @@
 extends Node
 
 var current_scene = null
+var enemy_count = 3;
 
 func _ready():
 	var root = get_tree().root
