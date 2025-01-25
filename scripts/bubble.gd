@@ -3,6 +3,7 @@ extends CharacterBody2D
 class_name BubbleEnemy
 
 const SPEED = 100
+var comboAddition
 
 @onready var ray_cast_right: RayCast2D = $RayCastRight
 @onready var ray_cast_left: RayCast2D = $RayCastLeft
@@ -31,11 +32,30 @@ func _physics_process(delta):
 
 # Handle input events (e.g., mouse clicks)
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int):
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		trigger_death()
+	if(event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT):
+		if(event.pressed):
+			Global.combo += 5
+			trigger_death()
+			
+		else:
+			print("hi")
+			Global.combo=0
+	#if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		#trigger_death()
+
+	
+func trigger_death():
+	trigger_death_animation()
+	comboAddition = 25*Global.combo
+	Global.score += 50+comboAddition
+	
+
+	
+	print(Global.combo)
+	
 
 # Play the death animation and queue the node for removal
-func trigger_death():
+func trigger_death_animation():
 	animation_player.play("pop")
 	# Wait for the animation to finish using a signal
 	animation_player.animation_finished.connect(_on_death_animation_finished)
