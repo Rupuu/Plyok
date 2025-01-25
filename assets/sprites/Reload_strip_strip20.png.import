@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd60dw3gi8x7o"
-path="res://.godot/imported/Main_gun_useable_size.png-0c7b534e5c7085010504515bdb18f12d.ctex"
+uid="uid://dm43flivcrrvo"
+path="res://.godot/imported/Reload_strip_strip20.png-c1e1a82181bc6833c3cacad34b117a0e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Main_gun_useable_size.png"
-dest_files=["res://.godot/imported/Main_gun_useable_size.png-0c7b534e5c7085010504515bdb18f12d.ctex"]
+source_file="res://assets/sprites/Reload_strip_strip20.png"
+dest_files=["res://.godot/imported/Reload_strip_strip20.png-c1e1a82181bc6833c3cacad34b117a0e.ctex"]
 
 [params]
 

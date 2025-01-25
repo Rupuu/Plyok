@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dm43flivcrrvo"
-path="res://.godot/imported/Reload_strip_strip20.png-9af343330dc53f3ddc56d6be70ef8065.ctex"
+uid="uid://by8la7d3w6n26"
+path="res://.godot/imported/Bubble_man_transparent.png-14c754fd0b1a032b9f2ad498531127c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Reload_strip_strip20.png"
-dest_files=["res://.godot/imported/Reload_strip_strip20.png-9af343330dc53f3ddc56d6be70ef8065.ctex"]
+source_file="res://assets/sprites/Bubble_man_transparent.png"
+dest_files=["res://.godot/imported/Bubble_man_transparent.png-14c754fd0b1a032b9f2ad498531127c9.ctex"]
 
 [params]
 

@@ -1,8 +1,8 @@
 [gd_scene load_steps=25 format=3 uid="uid://dlyxvs2hkjynk"]
 
 [ext_resource type="Script" path="res://scripts/water_gun.gd" id="1_60lgm"]
-[ext_resource type="Texture2D" uid="uid://bd60dw3gi8x7o" path="res://assets/Main_gun_useable_size.png" id="1_so2hy"]
-[ext_resource type="Texture2D" uid="uid://dm43flivcrrvo" path="res://assets/Reload_strip_strip20.png" id="2_dgkqm"]
+[ext_resource type="Texture2D" uid="uid://bd60dw3gi8x7o" path="res://assets/sprites/Main_gun_useable_size.png" id="1_so2hy"]
+[ext_resource type="Texture2D" uid="uid://dm43flivcrrvo" path="res://assets/sprites/Reload_strip_strip20.png" id="2_dgkqm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kgj6o"]
 atlas = ExtResource("2_dgkqm")
