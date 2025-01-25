@@ -9,8 +9,16 @@ const SPEED = 100
 @onready var animation_player = $AnimatedSprite2D
 
 func _ready():
-	velocity = Vector2(choose([-20,20,-40,40]),choose([-20,20,-40,40])).normalized() * SPEED
-
+		# Set random velocity for the bubble
+	velocity = Vector2(choose([-20, 20, -40, 40]), choose([-20, 20, -40, 40])).normalized() * SPEED
+	
+	# Rotate the bubble randomly
+	animation_player.rotate(choose([-0.3, -0.3, 0, 0.3, 0.4]))
+	
+	# Set random size for the bubble
+	var random_scale = choose([0.75, 1.0, 1.25])  # Choose a random scale factor
+	scale = Vector2(random_scale, random_scale)  # Apply uniform scaling
+	
 func _physics_process(delta):
 	var collision = move_and_collide(velocity * delta)
 	if collision:
