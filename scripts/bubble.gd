@@ -10,6 +10,8 @@ var comboAddition
 @onready var animation_player = $AnimatedSprite2D
 
 func _ready():
+	Global.enemy_count += 1
+	print(Global.enemy_count)
 	# Set random velocity for the bubble
 	velocity = Vector2(choose([-20, 20, -40, 40]), choose([-20, 20, -40, 40])).normalized() * SPEED
 	

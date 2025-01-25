@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcc65tnfjlm6x"
-path="res://.godot/imported/Water_spray_strip15.png-90de233b6dbcd6ab22616ee0264497e8.ctex"
+uid="uid://ctcscups3ggdp"
+path="res://.godot/imported/Crosshair.png-b7527158e14afd326027e8112d5d8a44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/weapon-sprites/Water_spray_strip15.png"
-dest_files=["res://.godot/imported/Water_spray_strip15.png-90de233b6dbcd6ab22616ee0264497e8.ctex"]
+source_file="res://assets/sprites/weapon-sprites/Crosshair.png"
+dest_files=["res://.godot/imported/Crosshair.png-b7527158e14afd326027e8112d5d8a44.ctex"]
 
 [params]
 
