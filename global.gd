@@ -5,7 +5,7 @@ var current_scene = null
 var score = 0
 var combo = -1
 var enemy_count = 3;
-
+var timeElapsedSinceClick = 0.01
 
 
 

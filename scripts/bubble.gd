@@ -23,6 +23,7 @@ func _ready():
 	scale = Vector2(random_scale, random_scale)  # Apply uniform scaling
 
 func _physics_process(delta):
+	Global.timeElapsedSinceClick = Global.timeElapsedSinceClick-delta
 	var collision = move_and_collide(velocity * delta)
 	if collision:
 		# Change direction based on collision
@@ -36,20 +37,20 @@ func _physics_process(delta):
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int):
 	if(event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT):
 		if(event.pressed):
-			Global.combo += 5
+			Global.combo += 1
 			trigger_death()
 			
-		else:
-			print("hi")
-			Global.combo=0
-	#if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		#trigger_death()
+		elif(Global.timeElapsedSinceClick<=0):
+			Global.combo = 0
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		trigger_death()
 
 	
 func trigger_death():
 	trigger_death_animation()
 	comboAddition = 25*Global.combo
 	Global.score += 50+comboAddition
+	Global.timeElapsedSinceClick = 1
 	
 
 	
