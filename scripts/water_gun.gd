@@ -6,12 +6,17 @@ const MIN_VERTICAL_DIST = -200
 
 const MAX_HORIZONTAL_DIST = 150
 const MIN_HORIZONTAL_DIST = 50
+@onready var watergun: AnimatedSprite2D = $Watergun
+@onready var reload_spurt: AnimatedSprite2D = $Watergun/ReloadSpurt
+@onready var shoot_spurt: AnimatedSprite2D = $Watergun/ShootSpurt
+@onready var shoot_spurt_2: AnimatedSprite2D = $Watergun/ShootSpurt2
+
 
 var previous_mouse_position = Vector2.ZERO
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	reload_spurt.visible = false
 	pass # Replace with function body.
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	# Get the global position of the mouse
@@ -35,5 +40,26 @@ func _process(delta: float) -> void:
 #HORIZONTAL MOVEMENT
 	if(mouse_position[1]>MIN_HORIZONTAL_DIST):
 		position.y = min(mouse_position[1],MAX_HORIZONTAL_DIST)
+#RELOAD
+	if(Input.is_action_pressed("ui_select")):
+		reload()
+	if(watergun.frame==TARGET_FRAME):
+		startSpurtAnimation()
+	if(Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
+		startShootSpurtAnimation()
 	
 	previous_mouse_position = mouse_position
+
+const TARGET_FRAME = 4
+
+func startSpurtAnimation():
+	reload_spurt.visible = true
+	reload_spurt.play()
+func startShootSpurtAnimation():
+	shoot_spurt.play()
+	shoot_spurt_2.play()
+
+func reload():
+
+	watergun.play("reload")
+	pass
