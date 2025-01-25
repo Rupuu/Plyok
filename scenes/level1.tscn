@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://c86ya51tgc5pe"]
+[gd_scene load_steps=8 format=3 uid="uid://c86ya51tgc5pe"]
 
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_0i67u"]
 [ext_resource type="PackedScene" uid="uid://dlyxvs2hkjynk" path="res://scenes/water_gun.tscn" id="1_5wikp"]
 [ext_resource type="Texture2D" uid="uid://cd8q2n72gieai" path="res://assets/sprites/BackgroundProto.png" id="2_irbwg"]
 [ext_resource type="PackedScene" uid="uid://bxpmg0gsukuib" path="res://scenes/bubble.tscn" id="3_1w46a"]
 [ext_resource type="PackedScene" uid="uid://i6lmgx67otxi" path="res://scenes/enemy_spawn_point.tscn" id="4_ijg0v"]
-[ext_resource type="PackedScene" uid="uid://cle3rtsq172nl" path="res://scenes/crosshair.tscn" id="6_ge6o1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5gqfj"]
 size = Vector2(10, 926)
@@ -26,8 +25,6 @@ top_level = true
 position = Vector2(12, 78)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-
-[node name="Crosshair" parent="." instance=ExtResource("6_ge6o1")]
 
 [node name="Walls" type="StaticBody2D" parent="."]
 
