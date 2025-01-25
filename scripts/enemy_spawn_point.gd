@@ -9,6 +9,8 @@ var current_nodes: int
 
 
 func _on_timer_timeout():
-	var enemy = enemy_scene.instantiate()
-	enemy.position = position
-	get_parent().add_child(enemy)
+	if get_child_count() < 12:
+		print(get_child_count())
+		var enemy = enemy_scene.instantiate()
+		enemy.position = position
+		add_child(enemy)
