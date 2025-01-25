@@ -279,7 +279,7 @@ script = ExtResource("1_60lgm")
 position = Vector2(-60, 140)
 scale = Vector2(0.23871, 0.23871)
 sprite_frames = SubResource("SpriteFrames_t7eal")
-animation = &"reload"
+animation = &"shoot"
 
 [node name="ReloadSpurt" type="AnimatedSprite2D" parent="Watergun"]
 position = Vector2(385.405, 238.784)
