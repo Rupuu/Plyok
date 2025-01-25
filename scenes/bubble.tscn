@@ -105,13 +105,17 @@ script = ExtResource("1_inmyy")
 position = Vector2(3, 2)
 scale = Vector2(0.32375, 0.32375)
 sprite_frames = SubResource("SpriteFrames_t3gr1")
-animation = &"pop"
+animation = &"idle"
 autoplay = "idle"
-frame = 9
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 3)
 shape = SubResource("CircleShape2D_dm2nv")
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+target_position = Vector2(44, 1)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-38, 1)
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
