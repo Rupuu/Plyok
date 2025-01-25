@@ -9,6 +9,7 @@ var current_nodes: int
 
 
 func _on_timer_timeout():
+
 	if Global.enemy_count < 10:
 		var enemy = enemy_scene.instantiate()
 		enemy.position = position
