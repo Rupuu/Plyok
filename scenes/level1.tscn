@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://daw4ywrht0gt4"]
+
+[ext_resource type="PackedScene" uid="uid://dlyxvs2hkjynk" path="res://scenes/water_gun.tscn" id="1_5wikp"]
+[ext_resource type="Texture2D" uid="uid://c4rmj3w7o06g4" path="res://assets/Illustration.png" id="1_o6hvo"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Illustration" type="Sprite2D" parent="."]
+position = Vector2(18, -53.75)
+scale = Vector2(0.77625, 0.77625)
+texture = ExtResource("1_o6hvo")
+
+[node name="WaterGun" parent="." instance=ExtResource("1_5wikp")]
+position = Vector2(12, 78)
+
+[node name="Camera2D" type="Camera2D" parent="."]

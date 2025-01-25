@@ -11,5 +11,14 @@ config_version=5
 [application]
 
 config/name="Plyok"
+run/main_scene="res://scenes/main-menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://global.gd"
+
+[dotnet]
+
+project/assembly_name="Plyok"
