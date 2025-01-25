@@ -3,6 +3,7 @@ extends Node
 var current_scene = null
 var score = 0
 var combo = -1
+var timeElapsedSinceClick = 0.01
 
 func _ready():
 	var root = get_tree().root
