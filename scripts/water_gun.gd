@@ -4,8 +4,8 @@ const MAX_ROTATION = 20
 const MAX_VERTICAL_DIST = 250
 const MIN_VERTICAL_DIST = -200
 
-const MAX_HORIZONTAL_DIST = 150
-const MIN_HORIZONTAL_DIST = 50
+const MAX_HORIZONTAL_DIST = 200
+const MIN_HORIZONTAL_DIST = 0
 @onready var watergun: AnimatedSprite2D = $Watergun
 @onready var reload_spurt: AnimatedSprite2D = $Watergun/ReloadSpurt
 @onready var shoot_spurt: AnimatedSprite2D = $Watergun/ShootSpurt
