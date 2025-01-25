@@ -43,4 +43,4 @@ position = Vector2(15, 329)
 shape = SubResource("RectangleShape2D_jr66a")
 
 [node name="EnemySpawnPoint" parent="." instance=ExtResource("4_ijg0v")]
-position = Vector2(-117, -101)
+position = Vector2(-178, -159)

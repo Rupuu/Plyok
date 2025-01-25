@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://qumsq3qqbrdu"]
+
+[ext_resource type="PackedScene" uid="uid://c86ya51tgc5pe" path="res://scenes/level1.tscn" id="1_kcr3g"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Level1" parent="." instance=ExtResource("1_kcr3g")]
+position = Vector2(532, 324)
