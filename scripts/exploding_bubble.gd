@@ -1,14 +1,13 @@
 extends CharacterBody2D
 
-class_name BubbleEnemy
-
+class_name ExplodingBubble
 const SPEED = 100
 var comboAddition
 
 @onready var ray_cast_right: RayCast2D = $RayCastRight
 @onready var ray_cast_left: RayCast2D = $RayCastLeft
 @onready var animation_player = $AnimatedSprite2D
-@onready var collision_player = $CollisionShape2D
+@onready var collider_player = $CollisionShape2D
 
 func _ready():
 	Global.enemy_count += 1
@@ -48,8 +47,9 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int):
 	
 func trigger_death():
 	trigger_death_animation()
+	collider_player.apply_scale(scale*6)
 	comboAddition = 25*Global.combo
-	Global.score += 50+comboAddition
+	Global.score += 150+comboAddition
 	Global.enemy_count -= 1
 
 	print(Global.combo)
