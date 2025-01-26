@@ -1,6 +1,6 @@
 extends Marker2D
 
-@onready var enemy_scene = preload("res://scenes/bubble.tscn")
+@onready var enemy_scene = preload("res://scenes/exploding_bubble.tscn")
 
 #will use to implement how much enemies and when to stop spawning them
 #may be more appropriate in the level script

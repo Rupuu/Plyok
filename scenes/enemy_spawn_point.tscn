@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/enemy_spawn_point.gd" id="1_dc54b"]
 
-[node name="EnemySpawnPoint" type="Marker2D"]
+[node name="BubbleSpawnPoint" type="Marker2D"]
 position = Vector2(36, -28)
 script = ExtResource("1_dc54b")
 
