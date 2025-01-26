@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c86ya51tgc5pe"]
+[gd_scene load_steps=12 format=3 uid="uid://c86ya51tgc5pe"]
 
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_0i67u"]
 [ext_resource type="PackedScene" uid="uid://dlyxvs2hkjynk" path="res://scenes/water_gun.tscn" id="1_5wikp"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bxpmg0gsukuib" path="res://scenes/bubble.tscn" id="3_1w46a"]
 [ext_resource type="PackedScene" uid="uid://crcu6hmejqbd3" path="res://scenes/exploding_bubble_spawn_point.tscn" id="6_fqjj7"]
 [ext_resource type="PackedScene" uid="uid://cle3rtsq172nl" path="res://scenes/crosshair.tscn" id="6_ge6o1"]
+[ext_resource type="PackedScene" uid="uid://i6lmgx67otxi" path="res://scenes/enemy_spawn_point.tscn" id="6_lpctr"]
 [ext_resource type="PackedScene" uid="uid://dew8255kvb5l" path="res://scenes/exploding_bubble.tscn" id="6_q5ihy"]
 [ext_resource type="PackedScene" path="res://scenes/score.tscn" id="7_cxvbs"]
 
@@ -49,11 +50,11 @@ shape = SubResource("RectangleShape2D_jr66a")
 position = Vector2(44, 334)
 shape = SubResource("RectangleShape2D_jr66a")
 
-[node name="ExplodingBubbleSpawnPoint2" parent="." instance=ExtResource("6_fqjj7")]
-position = Vector2(-12, -374)
-
-[node name="ExplodingBubbleSpawnPoint3" parent="." instance=ExtResource("6_fqjj7")]
+[node name="ExplodingBubbleSpawnPoint" parent="." instance=ExtResource("6_fqjj7")]
 position = Vector2(615, -142)
+
+[node name="BubbleSpawnPoint" parent="." instance=ExtResource("6_lpctr")]
+position = Vector2(29.1503, -116.913)
 
 [node name="ExplodingBubble" parent="." instance=ExtResource("6_q5ihy")]
 

@@ -47,7 +47,7 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int):
 	
 func trigger_death():
 	trigger_death_animation()
-	collider_player.apply_scale(scale*6)
+	collider_player.apply_scale(scale*8)
 	comboAddition = 25*Global.combo
 	Global.score += 150+comboAddition
 	Global.enemy_count -= 1
