@@ -1,0 +1,141 @@
+[gd_scene load_steps=11 format=3 uid="uid://d3l3t8rkw7ddf"]
+
+[ext_resource type="Script" path="res://scenes/shop.gd" id="1_khqw5"]
+[ext_resource type="Texture2D" uid="uid://dxl2nmm5frlnj" path="res://assets/sprites/ToolShed.png" id="1_ksm1w"]
+[ext_resource type="Texture2D" uid="uid://dvmtbixwk738q" path="res://assets/sprites/Shop/Rocket Outline.png" id="3_b127n"]
+[ext_resource type="Texture2D" uid="uid://cri00hh73bfal" path="res://assets/sprites/Shop/DuctTape Outline.png" id="4_tohvk"]
+[ext_resource type="Texture2D" uid="uid://nxf7005fnkfk" path="res://assets/sprites/Shop/BoxArmor Outline.png" id="5_wytov"]
+[ext_resource type="Texture2D" uid="uid://70ian2o30bu2" path="res://assets/sprites/Shop/Saw Outline.png" id="6_oq22n"]
+[ext_resource type="Texture2D" uid="uid://cxuox3kv8fiuw" path="res://assets/sprites/Shop/Gun outline.png" id="7_ckugf"]
+[ext_resource type="Texture2D" uid="uid://cmp7wu367i41p" path="res://assets/sprites/Shop/Hose outline.png" id="8_jfeqe"]
+[ext_resource type="Texture2D" uid="uid://u883ua04rwoq" path="res://assets/sprites/Shop/Box Outline.png" id="9_wyusx"]
+[ext_resource type="Texture2D" uid="uid://dob7tlij8hrkp" path="res://assets/sprites/Shop/ToolShedEscape.png" id="10_sddfi"]
+
+[node name="Shop" type="Node2D"]
+script = ExtResource("1_khqw5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Shop" type="Sprite2D" parent="."]
+scale = Vector2(0.603334, 0.603333)
+texture = ExtResource("1_ksm1w")
+
+[node name="Rocket" type="Sprite2D" parent="."]
+position = Vector2(310, -134)
+scale = Vector2(0.581498, 0.581498)
+texture = ExtResource("3_b127n")
+
+[node name="Tape" type="Sprite2D" parent="."]
+position = Vector2(-363, 234)
+scale = Vector2(0.57489, 0.57489)
+texture = ExtResource("4_tohvk")
+
+[node name="Toolbox" type="Sprite2D" parent="."]
+position = Vector2(452, 124)
+scale = Vector2(0.592511, 0.592511)
+texture = ExtResource("5_wytov")
+
+[node name="Saw" type="Sprite2D" parent="."]
+position = Vector2(-297, 184)
+scale = Vector2(0.581498, 0.581498)
+texture = ExtResource("6_oq22n")
+
+[node name="WaterGun" type="Sprite2D" parent="."]
+position = Vector2(2, -61)
+scale = Vector2(0.5837, 0.5837)
+texture = ExtResource("7_ckugf")
+
+[node name="Hose" type="Sprite2D" parent="."]
+position = Vector2(94, 168.5)
+scale = Vector2(0.579295, 0.589207)
+texture = ExtResource("8_jfeqe")
+
+[node name="Box" type="Sprite2D" parent="."]
+position = Vector2(-89, 208)
+scale = Vector2(0.596916, 0.596916)
+texture = ExtResource("9_wyusx")
+
+[node name="BackToMap" type="Sprite2D" parent="."]
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("10_sddfi")
+
+[node name="ButtonBackToMap" type="Button" parent="."]
+offset_left = -634.0
+offset_top = -306.0
+offset_right = -268.0
+offset_bottom = 84.0
+focus_mode = 0
+
+[node name="ButtonTape" type="Button" parent="."]
+offset_left = -438.0
+offset_top = 259.0
+offset_right = -352.0
+offset_bottom = 314.0
+focus_mode = 0
+flat = true
+
+[node name="ButtonToolbox" type="Button" parent="."]
+offset_left = 368.0
+offset_top = 44.0
+offset_right = 552.0
+offset_bottom = 231.0
+focus_mode = 0
+flat = true
+
+[node name="ButtonHose" type="Button" parent="."]
+offset_left = 31.0
+offset_top = 75.0
+offset_right = 184.0
+offset_bottom = 283.0
+focus_mode = 0
+flat = true
+
+[node name="ButtonSaw" type="Button" parent="."]
+offset_left = -337.0
+offset_top = 143.0
+offset_right = -257.0
+offset_bottom = 217.0
+focus_mode = 0
+flat = true
+
+[node name="ButtonWaterGun" type="Button" parent="."]
+offset_left = -122.0
+offset_top = -121.0
+offset_right = 154.0
+offset_bottom = 4.0
+focus_mode = 0
+flat = true
+
+[node name="ButtonRocket" type="Button" parent="."]
+offset_left = 267.0
+offset_top = -224.0
+offset_right = 337.0
+offset_bottom = -68.0
+focus_mode = 0
+flat = true
+
+[node name="ButtonBox" type="Button" parent="."]
+offset_left = -151.0
+offset_top = 174.0
+offset_right = -25.0
+offset_bottom = 299.0
+focus_mode = 0
+flat = true
+
+[connection signal="mouse_entered" from="ButtonBackToMap" to="." method="_on_button_back_to_map_mouse_entered"]
+[connection signal="mouse_exited" from="ButtonBackToMap" to="." method="_on_button_back_to_map_mouse_exited"]
+[connection signal="pressed" from="ButtonBackToMap" to="." method="_on_button_back_to_map_pressed"]
+[connection signal="mouse_entered" from="ButtonTape" to="." method="_on_button_tape_mouse_entered"]
+[connection signal="mouse_exited" from="ButtonTape" to="." method="_on_button_tape_mouse_exited"]
+[connection signal="mouse_entered" from="ButtonToolbox" to="." method="_on_button_toolbox_mouse_entered"]
+[connection signal="mouse_exited" from="ButtonToolbox" to="." method="_on_button_toolbox_mouse_exited"]
+[connection signal="mouse_entered" from="ButtonHose" to="." method="_on_button_hose_mouse_entered"]
+[connection signal="mouse_exited" from="ButtonHose" to="." method="_on_button_hose_mouse_exited"]
+[connection signal="mouse_entered" from="ButtonSaw" to="." method="_on_button_saw_mouse_entered"]
+[connection signal="mouse_exited" from="ButtonSaw" to="." method="_on_button_saw_mouse_exited"]
+[connection signal="mouse_entered" from="ButtonWaterGun" to="." method="_on_button_water_gun_mouse_entered"]
+[connection signal="mouse_exited" from="ButtonWaterGun" to="." method="_on_button_water_gun_mouse_exited"]
+[connection signal="mouse_entered" from="ButtonRocket" to="." method="_on_button_rocket_mouse_entered"]
+[connection signal="mouse_exited" from="ButtonRocket" to="." method="_on_button_rocket_mouse_exited"]
+[connection signal="mouse_entered" from="ButtonBox" to="." method="_on_button_box_mouse_entered"]
+[connection signal="mouse_exited" from="ButtonBox" to="." method="_on_button_box_mouse_exited"]

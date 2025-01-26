@@ -8,4 +8,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	Global.timeElapsedSinceClick = Global.timeElapsedSinceClick-delta
+	Global.health -= Global.HEALTH_TIME_PENALTY * delta
+	print(Global.health)
 	pass

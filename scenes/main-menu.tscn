@@ -1,18 +1,145 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3g0shxiodxpt"]
+[gd_scene load_steps=23 format=3 uid="uid://b3g0shxiodxpt"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_glcs1"]
+[ext_resource type="Texture2D" uid="uid://rht6frq8aa2w" path="res://assets/sprites/Map/1.png" id="2_8lv14"]
+[ext_resource type="Texture2D" uid="uid://c3f8xplren4rb" path="res://assets/sprites/Map/2.png" id="3_h0pb6"]
+[ext_resource type="Texture2D" uid="uid://c56ee2yjvyt7u" path="res://assets/sprites/Map/3.png" id="4_k8khh"]
+[ext_resource type="Texture2D" uid="uid://c7gy8ikp4f88l" path="res://assets/sprites/Map/4.png" id="5_w28a6"]
+[ext_resource type="Texture2D" uid="uid://8blxivyncoxk" path="res://assets/sprites/Map/5.png" id="6_u3nsb"]
+[ext_resource type="Texture2D" uid="uid://bu1lwntjefejo" path="res://assets/sprites/Map/6.png" id="7_g61go"]
+[ext_resource type="Texture2D" uid="uid://df86jl7lkus0g" path="res://assets/sprites/Map/7.png" id="8_lpwbn"]
+[ext_resource type="Texture2D" uid="uid://dwh0mtit78n4b" path="res://assets/sprites/Map/8.png" id="9_ho41c"]
+[ext_resource type="Texture2D" uid="uid://ding0ce6cr7t8" path="res://assets/sprites/Map/9.png" id="10_oidon"]
+[ext_resource type="Texture2D" uid="uid://cjf1l2o0aqwf3" path="res://assets/sprites/Map/10.png" id="11_bdwgt"]
+[ext_resource type="Texture2D" uid="uid://bv26csb5tt1ux" path="res://assets/sprites/Map/11.png" id="12_58lop"]
+[ext_resource type="Texture2D" uid="uid://dvtvwttvhs1qf" path="res://assets/sprites/Map/12.png" id="13_itjtj"]
+[ext_resource type="Texture2D" uid="uid://e4ka2f1o4vg6" path="res://assets/sprites/Map/12a Copy 2.png" id="14_wqref"]
+[ext_resource type="Texture2D" uid="uid://ptygfq3hkxh3" path="res://assets/sprites/Map/12a.png" id="15_4op7d"]
+[ext_resource type="Texture2D" uid="uid://djjwh82xtq0ny" path="res://assets/sprites/Map/13 Copy 2.png" id="16_dn2xr"]
+[ext_resource type="Texture2D" uid="uid://b8weo025hv54v" path="res://assets/sprites/Map/13 Copy 3.png" id="17_hlp0w"]
+[ext_resource type="Texture2D" uid="uid://c7x1pvv2rk8de" path="res://assets/sprites/Map/13.png" id="18_0lkbf"]
+[ext_resource type="Texture2D" uid="uid://bvj4yw51qa2dy" path="res://assets/sprites/Map/Factory_Outline.png" id="19_a7yag"]
+[ext_resource type="Texture2D" uid="uid://cg84h4w7548ks" path="res://assets/sprites/Map/House_Outline.png" id="20_kdpfu"]
+[ext_resource type="Texture2D" uid="uid://dmxsi14hxstap" path="res://assets/sprites/Map/ToolShed_Outline.png" id="21_leibl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lgfbk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8lv14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_h0pb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_k8khh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_w28a6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_u3nsb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_g61go")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_lpwbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ho41c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_oidon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_bdwgt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_58lop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_itjtj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4op7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_wqref")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_dn2xr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_hlp0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_0lkbf")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
 
 [node name="main-menu" type="Node2D"]
 script = ExtResource("1_glcs1")
 
-[node name="Button" type="Button" parent="."]
-offset_left = -82.0
-offset_top = -124.0
-offset_right = 83.0
-offset_bottom = -60.0
-text = "StartGame
-"
-
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.90735e-06, -3)
+scale = Vector2(0.62, 0.62)
+sprite_frames = SubResource("SpriteFrames_lgfbk")
+frame = 16
+frame_progress = 1.0
+
+[node name="Factory" type="Sprite2D" parent="."]
+position = Vector2(-356, -97)
+scale = Vector2(0.585628, 0.585628)
+texture = ExtResource("19_a7yag")
+
+[node name="ButtonFactory" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.128
+anchor_top = 0.288
+anchor_right = 0.799
+anchor_bottom = 0.843
+offset_left = -579.0
+offset_top = -202.0
+offset_right = -125.0
+offset_bottom = 120.0
+focus_mode = 0
+
+[node name="Soap" type="Sprite2D" parent="."]
+position = Vector2(186, -28)
+scale = Vector2(0.590308, 0.590308)
+texture = ExtResource("20_kdpfu")
+
+[node name="ButtonSoap" type="Button" parent="."]
+offset_left = 32.0
+offset_top = -234.0
+offset_right = 360.0
+offset_bottom = 126.0
+focus_mode = 0
+
+[node name="Shop" type="Sprite2D" parent="."]
+position = Vector2(486, -31)
+scale = Vector2(0.592511, 0.592511)
+texture = ExtResource("21_leibl")
+
+[node name="ButtonShop" type="Button" parent="."]
+offset_left = 402.0
+offset_top = -103.0
+offset_right = 583.0
+offset_bottom = 72.0
+focus_mode = 0
+
+[connection signal="mouse_entered" from="ButtonFactory" to="." method="_on_button_2_mouse_entered"]
+[connection signal="mouse_exited" from="ButtonFactory" to="." method="_on_button_2_mouse_exited"]
+[connection signal="pressed" from="ButtonFactory" to="." method="_on_button_2_pressed"]
+[connection signal="mouse_entered" from="ButtonSoap" to="." method="_on_button_soap_mouse_entered"]
+[connection signal="mouse_exited" from="ButtonSoap" to="." method="_on_button_soap_mouse_exited"]
+[connection signal="pressed" from="ButtonSoap" to="." method="_on_button_soap_pressed"]
+[connection signal="mouse_entered" from="ButtonShop" to="." method="_on_button_shop_mouse_entered"]
+[connection signal="mouse_exited" from="ButtonShop" to="." method="_on_button_shop_mouse_exited"]
+[connection signal="pressed" from="ButtonShop" to="." method="_on_button_shop_pressed"]
