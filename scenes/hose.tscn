@@ -45,6 +45,6 @@ action_mode = 0
 position = Vector2(134, -104)
 scale = Vector2(0.589147, 0.589147)
 sprite_frames = SubResource("SpriteFrames_aneh8")
-frame_progress = 0.356046
+frame_progress = 0.751939
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
