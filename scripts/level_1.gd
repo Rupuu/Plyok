@@ -1,5 +1,8 @@
 extends Node2D
 
+@onready var squirt_over: Node2D = $SquirtOver
+
+signal gameOver
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,12 +14,6 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	
-	Global.timeElapsedSinceClick = Global.timeElapsedSinceClick-delta
-	#CALCULATES THE HEALTH LINEARLY AND EXPONENTIALLY
-	Global.health -= Global.HEALTH_TIME_PENALTY * delta
-	Global.HEALTH_TIME_PENALTY += delta*0.10
-	Global.HEALTH_TIME_PENALTY += delta*0.10*1.025
-	
-	
-	print(Global.HEALTH_TIME_PENALTY)
+	if(Global.health<=0):
+		Global.game_over=true
 	pass

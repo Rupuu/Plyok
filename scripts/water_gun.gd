@@ -47,6 +47,9 @@ func _process(delta: float) -> void:
 		startSpurtAnimation()
 	if(Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
 		startShootSpurtAnimation()
+		
+	if(Global.game_over):
+		queue_free()
 	
 	previous_mouse_position = mouse_position
 

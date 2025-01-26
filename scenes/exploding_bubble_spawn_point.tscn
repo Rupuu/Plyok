@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://crcu6hmejqbd3"]
+[gd_scene load_steps=2 format=3 uid="uid://daxgto21xpqg3"]
 
 [ext_resource type="Script" path="res://scripts/exploding_bubble_spawn_point.gd" id="1_1drgt"]
 
@@ -7,7 +7,7 @@ position = Vector2(36, -28)
 script = ExtResource("1_1drgt")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 4.0
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

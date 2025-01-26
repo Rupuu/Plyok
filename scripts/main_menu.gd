@@ -8,10 +8,11 @@ extends Node2D
 
 @onready var shop: Sprite2D = $Shop
 @onready var button_shop: Button = $ButtonShop
-
+@onready var to_house_animation: AnimatedSprite2D = $ToHouseAnimation
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	to_house_animation.visible=false
 	animated_sprite_2d.play()
 	factorySprite.visible = false
 	soap.visible = false
@@ -23,7 +24,9 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func _on_button_pressed() -> void:
-	Global.goto_scene("res://scenes/level1.tscn")
+	to_house_animation.visible = true
+
+	to_house_animation.play()
 
 func _on_button_2_pressed() -> void:
 	pass
@@ -52,9 +55,11 @@ func _on_button_shop_toggled(toggled_on: bool) -> void:
 func _on_button_shop_mouse_entered() -> void:
 	shop.visible = true
 
-
 func _on_button_shop_mouse_exited() -> void:
 	shop.visible = false
 
 func _on_button_shop_pressed() -> void:
 	Global.goto_scene("res://scenes/shop.tscn")
+
+#func _on_to_house_animation_animation_finished() -> void:
+	#Global.goto_scene("res://scenes/level1.tscn")

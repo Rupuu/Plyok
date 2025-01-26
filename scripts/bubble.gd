@@ -23,6 +23,10 @@ func _ready():
 	scale = Vector2(random_scale, random_scale)  # Apply uniform scaling
 
 func _physics_process(delta):
+	
+	
+	
+	
 	var collision = move_and_collide(velocity * delta)
 	if collision:
 		# Change direction based on collision
@@ -31,6 +35,8 @@ func _physics_process(delta):
 			animation_player.flip_h = true
 		if ray_cast_left.is_colliding():
 			animation_player.flip_h = false
+		if(Global.game_over):
+			queue_free()
 
 # Handle input events (e.g., mouse clicks)
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int):
@@ -74,3 +80,15 @@ func _on_death_animation_finished():
 func choose(array):
 	array.shuffle()
 	return array.front()
+
+
+func _on_animated_sprite_2d_animation_finished() -> void:
+	pass # Replace with function body.
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.
