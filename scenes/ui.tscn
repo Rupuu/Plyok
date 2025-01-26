@@ -1,0 +1,110 @@
+[gd_scene load_steps=24 format=3 uid="uid://v2quwsf7oss1"]
+
+[ext_resource type="Script" path="res://scenes/ui.gd" id="1_coljh"]
+[ext_resource type="Texture2D" uid="uid://dl6klhy1k23fa" path="res://assets/sprites/UI/UI.png" id="1_inn7l"]
+[ext_resource type="Texture2D" uid="uid://wkq7t6rdjmih" path="res://assets/sprites/Water Level/Water1.png" id="3_b5rdl"]
+[ext_resource type="Texture2D" uid="uid://c7frdectxv7nw" path="res://assets/sprites/Water Level/Water2.png" id="4_e6ab4"]
+[ext_resource type="Texture2D" uid="uid://bc7bg22eamw5m" path="res://assets/sprites/Water Level/Water3.png" id="5_a1y3p"]
+[ext_resource type="Texture2D" uid="uid://b5rt1cqbayonk" path="res://assets/sprites/Water Level/Water4.png" id="6_htqsx"]
+[ext_resource type="Texture2D" uid="uid://brbswwp17an64" path="res://assets/sprites/Water Level/Water5.png" id="7_xdbdj"]
+[ext_resource type="Texture2D" uid="uid://ctswtssxn3p13" path="res://assets/sprites/Water Level/Water6.png" id="8_mr15g"]
+[ext_resource type="Texture2D" uid="uid://dawvja7gwpb2e" path="res://assets/sprites/Water Level/Water7.png" id="9_nphyy"]
+[ext_resource type="Texture2D" uid="uid://dl67atx2ahprq" path="res://assets/sprites/Water Level/Water8.png" id="10_ov0ik"]
+[ext_resource type="Texture2D" uid="uid://n132rh1ih4ea" path="res://assets/sprites/Water Level/Water9.png" id="11_flpgh"]
+[ext_resource type="Texture2D" uid="uid://bbm3bu85gfujf" path="res://assets/sprites/Water Level/Water10.png" id="12_sens2"]
+[ext_resource type="Texture2D" uid="uid://diet3m6ftqyvl" path="res://assets/sprites/Water Level/Water11.png" id="13_hbs03"]
+[ext_resource type="Texture2D" uid="uid://m2xrqsujqy86" path="res://assets/sprites/Water Level/Water12.png" id="14_jy6sj"]
+[ext_resource type="Texture2D" uid="uid://bs0ktin1pblh8" path="res://assets/sprites/Water Level/Water14.png" id="15_0hf3k"]
+[ext_resource type="Texture2D" uid="uid://c17mibv8oa61s" path="res://assets/sprites/Water Level/Water16.png" id="16_nq0xx"]
+[ext_resource type="Texture2D" uid="uid://clspuwi703n6l" path="res://assets/sprites/Water Level/Water17.png" id="17_j0nac"]
+[ext_resource type="Texture2D" uid="uid://bqksnlygaig0f" path="res://assets/sprites/Water Level/Water18.png" id="18_ahts1"]
+[ext_resource type="Texture2D" uid="uid://bgdgpvky4rqbt" path="res://assets/sprites/Water Level/Water19.png" id="19_32cp1"]
+[ext_resource type="Texture2D" uid="uid://cfrj3um2xb3sv" path="res://assets/sprites/Water Level/Water20.png" id="20_h8jhs"]
+[ext_resource type="Texture2D" uid="uid://nlgsffvy37y8" path="res://assets/sprites/Water Level/Water21.png" id="21_c75bp"]
+[ext_resource type="Texture2D" uid="uid://b53uw6wnmnk0e" path="res://assets/sprites/Water Level/Water22.png" id="22_odej2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hoq10"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_odej2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_c75bp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_h8jhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_32cp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ahts1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_j0nac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_nq0xx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_0hf3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_jy6sj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hbs03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_sens2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_flpgh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ov0ik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_nphyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mr15g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xdbdj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_htqsx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_a1y3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_e6ab4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_b5rdl")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="UI" type="Node2D"]
+script = ExtResource("1_coljh")
+
+[node name="Ui" type="Sprite2D" parent="."]
+position = Vector2(76, -61)
+scale = Vector2(0.577519, 0.577519)
+texture = ExtResource("1_inn7l")
+
+[node name="HealthBar" type="AnimatedSprite2D" parent="."]
+position = Vector2(-4, -88)
+scale = Vector2(0.553846, 0.553846)
+sprite_frames = SubResource("SpriteFrames_hoq10")
+
+[node name="HealthBar2" type="AnimatedSprite2D" parent="."]
+position = Vector2(-4, -88)
+scale = Vector2(0.553846, 0.553846)
+sprite_frames = SubResource("SpriteFrames_hoq10")

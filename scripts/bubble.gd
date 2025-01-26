@@ -36,21 +36,29 @@ func _physics_process(delta):
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int):
 	if(event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT):
 		if(event.pressed):
-			Global.combo += 5
+			Global.combo += 1
+			gain_health()
 			trigger_death()
 			
-		else:
-			print("hi")
-			Global.combo=0
-	#if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		#trigger_death()
+		elif(Global.timeElapsedSinceClick<=0):
+			Global.combo = 0
+			Global.health -= Global.HEALTH_MISS_PENALTY
 
-	
+func gain_health():
+	Global.health += Global.HEALTH_HIT_REWARD
+	if(Global.health>110):
+		Global.health = 110
+
 func trigger_death():
 	trigger_death_animation()
 	comboAddition = 25*Global.combo
 	Global.score += 50+comboAddition
+
+	Global.timeElapsedSinceClick = 1
+	Global.enemy_count-=1
+
 	Global.enemy_count -= 1
+
 
 	print(Global.combo)
 
