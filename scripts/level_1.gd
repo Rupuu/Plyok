@@ -1,5 +1,6 @@
 extends Node2D
 
+
 @onready var squirt_over: Node2D = $SquirtOver
 
 signal gameOver
@@ -14,6 +15,9 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	
+  Global.timeElapsedSinceClick = Global.timeElapsedSinceClick-delta
+  
 	if(Global.health<=0):
 		Global.game_over=true
+
 	pass

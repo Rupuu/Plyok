@@ -12,3 +12,4 @@ func _process(delta: float) -> void:
 	health_bar.frame = round(Global.health/5)
 	if(Global.game_over):
 		queue_free()
+

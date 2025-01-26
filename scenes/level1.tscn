@@ -7,9 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://i6lmgx67otxi" path="res://scenes/enemy_spawn_point.tscn" id="4_ijg0v"]
 [ext_resource type="PackedScene" uid="uid://cle3rtsq172nl" path="res://scenes/crosshair.tscn" id="6_ge6o1"]
 [ext_resource type="PackedScene" uid="uid://daxgto21xpqg3" path="res://scenes/exploding_bubble_spawn_point.tscn" id="6_ikqv2"]
-[ext_resource type="PackedScene" uid="uid://bjqyx1cwuevgy" path="res://scenes/score.tscn" id="7_cxvbs"]
-[ext_resource type="PackedScene" uid="uid://v2quwsf7oss1" path="res://scenes/ui.tscn" id="8_x2ayu"]
 [ext_resource type="PackedScene" uid="uid://7a5d07jmundg" path="res://scenes/SquirtOver.tscn" id="10_awly5"]
+[ext_resource type="PackedScene" uid="uid://i6lmgx67otxi" path="res://scenes/enemy_spawn_point.tscn" id="6_lpctr"]
+[ext_resource type="PackedScene" path="res://scenes/score.tscn" id="7_cxvbs"]
+[ext_resource type="PackedScene" uid="uid://bywcv1ryjnjlo" path="res://scenes/ui.tscn" id="8_x2ayu"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5gqfj"]
 size = Vector2(10, 926)
@@ -21,7 +23,7 @@ size = Vector2(1450.25, 16)
 script = ExtResource("1_0i67u")
 
 [node name="Illustration" type="Sprite2D" parent="."]
-position = Vector2(18, -53.75)
+position = Vector2(23, -52)
 scale = Vector2(0.77625, 0.77625)
 texture = ExtResource("2_irbwg")
 
@@ -33,32 +35,36 @@ position = Vector2(12, 52)
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Crosshair" parent="." instance=ExtResource("6_ge6o1")]
+z_index = 5
 
 [node name="Walls" type="StaticBody2D" parent="."]
 
 [node name="Left" type="CollisionShape2D" parent="Walls"]
-position = Vector2(-683, -14)
+position = Vector2(-668, -16)
 shape = SubResource("RectangleShape2D_5gqfj")
 
 [node name="Right" type="CollisionShape2D" parent="Walls"]
-position = Vector2(688, -30)
+position = Vector2(663, -28)
 shape = SubResource("RectangleShape2D_5gqfj")
 
 [node name="Top" type="CollisionShape2D" parent="Walls"]
-position = Vector2(32, -462)
+position = Vector2(30, -432)
 shape = SubResource("RectangleShape2D_jr66a")
 
 [node name="Bottom" type="CollisionShape2D" parent="Walls"]
 position = Vector2(44, 322)
 shape = SubResource("RectangleShape2D_jr66a")
 
-[node name="EnemySpawners" type="Node" parent="."]
-
-[node name="EnemySpawnPoint2" parent="EnemySpawners" instance=ExtResource("4_ijg0v")]
-position = Vector2(643, -64)
 
 [node name="ExplodingBubbleSpawnPoint" parent="EnemySpawners" instance=ExtResource("6_ikqv2")]
 position = Vector2(-391, -232)
+
+
+[node name="BubbleSpawnPoint" parent="." instance=ExtResource("6_lpctr")]
+position = Vector2(621, -136)
+
+[node name="BubbleSpawnPoint3" parent="." instance=ExtResource("6_lpctr")]
+position = Vector2(-618, -120)
 
 [node name="StartBubbles" type="Node" parent="."]
 
@@ -66,18 +72,19 @@ position = Vector2(-391, -232)
 position = Vector2(-403, -75)
 scale = Vector2(1.25, 1.25)
 
-[node name="Bubble2" parent="StartBubbles" instance=ExtResource("3_1w46a")]
+[node name="StartBubbles#Bubble2" parent="." instance=ExtResource("3_1w46a")]
 position = Vector2(256, 37)
 scale = Vector2(0.75, 0.75)
 
-[node name="Bubble3" parent="StartBubbles" instance=ExtResource("3_1w46a")]
+[node name="StartBubbles#Bubble3" parent="." instance=ExtResource("3_1w46a")]
 position = Vector2(92, -166)
 scale = Vector2(0.5, 0.5)
 
 [node name="UI" parent="." instance=ExtResource("8_x2ayu")]
-position = Vector2(-489, 257)
+position = Vector2(-483, 243)
 
 [node name="Score" parent="." instance=ExtResource("7_cxvbs")]
+visible = false
 position = Vector2(-447, 286)
 
 [node name="SquirtOver" parent="." instance=ExtResource("10_awly5")]
