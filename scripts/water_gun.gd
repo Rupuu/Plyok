@@ -52,6 +52,9 @@ func _process(delta: float) -> void:
 		queue_free()
 	
 	previous_mouse_position = mouse_position
+	
+	if(Global.game_over):
+		queue_free()
 
 const TARGET_FRAME = 4
 

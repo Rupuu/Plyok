@@ -9,7 +9,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	print("hi")
 	health_bar.frame = round(Global.health/5)
 	if(Global.game_over):
 		queue_free()
-

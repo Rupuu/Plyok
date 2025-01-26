@@ -21,41 +21,49 @@ scale = Vector2(0.603334, 0.603333)
 texture = ExtResource("1_ksm1w")
 
 [node name="Rocket" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(310, -134)
 scale = Vector2(0.581498, 0.581498)
 texture = ExtResource("3_b127n")
 
 [node name="Tape" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-363, 234)
 scale = Vector2(0.57489, 0.57489)
 texture = ExtResource("4_tohvk")
 
 [node name="Toolbox" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(452, 124)
 scale = Vector2(0.592511, 0.592511)
 texture = ExtResource("5_wytov")
 
 [node name="Saw" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-297, 184)
 scale = Vector2(0.581498, 0.581498)
 texture = ExtResource("6_oq22n")
 
 [node name="WaterGun" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(2, -61)
 scale = Vector2(0.5837, 0.5837)
 texture = ExtResource("7_ckugf")
 
 [node name="Hose" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(94, 168.5)
 scale = Vector2(0.579295, 0.589207)
 texture = ExtResource("8_jfeqe")
 
 [node name="Box" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-89, 208)
 scale = Vector2(0.596916, 0.596916)
 texture = ExtResource("9_wyusx")
 
 [node name="BackToMap" type="Sprite2D" parent="."]
+visible = false
 scale = Vector2(0.625, 0.625)
 texture = ExtResource("10_sddfi")
 

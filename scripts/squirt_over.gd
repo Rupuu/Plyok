@@ -10,6 +10,7 @@ extends Node2D
 @onready var map_button: Button = $MapButton
 @onready var quit_button: Button = $QuitButton
 @onready var ranks: AnimatedSprite2D = $Node/Ranks/AnimatedSprite2D
+@onready var label: Label = $Node/ScoreSprite/Label
 
 var playOnce
 
@@ -21,11 +22,14 @@ const RANKTRESHOLD_F = 2000
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	playOnce=true
+	
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
+	label.text = str(Global.score)
 	
 	if(Global.game_over and playOnce):
 		playOnce = false
@@ -40,6 +44,7 @@ func _process(delta: float) -> void:
 		color_rect.visible=true
 		map_button.visible=true
 		quit_button.visible=true
+		label.visible=true
 		
 	if(Global.score>=RANKTRESHOLD_A):
 		ranks.frame=0
@@ -76,7 +81,9 @@ func _on_map_button_pressed() -> void:
 	Global.game_over = false
 	Global.health = 95.00;
 	Global.HEALTH_TIME_PENALTY = 1.5
+	Global.bubbles_popped = 0;
 	Global.goto_scene("res://scenes/main-menu.tscn")
+	
 	
 	
 

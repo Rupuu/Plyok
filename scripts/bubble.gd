@@ -24,9 +24,6 @@ func _ready():
 
 func _physics_process(delta):
 	
-	
-	
-	
 	var collision = move_and_collide(velocity * delta)
 	if collision:
 		# Change direction based on collision
@@ -46,7 +43,6 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int):
 			trigger_death()
 			
 		else:
-			print("hi")
 			Global.combo=0
 	#if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		#trigger_death()
@@ -59,7 +55,6 @@ func trigger_death():
 	Global.score += 50+comboAddition
 	Global.enemy_count -= 1
 
-	print(Global.combo)
 
 # Play the death animation and queue the node for removal
 func trigger_death_animation():

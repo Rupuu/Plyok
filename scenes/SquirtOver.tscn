@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://7a5d07jmundg"]
+[gd_scene load_steps=23 format=3 uid="uid://7a5d07jmundg"]
 
 [ext_resource type="Texture2D" uid="uid://cutrxhihnaf5s" path="res://assets/sprites/EndMenu/MapMenu.png" id="1_ss16c"]
 [ext_resource type="Script" path="res://scripts/squirt_over.gd" id="1_xv4ut"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://b361s00xijrpy" path="res://assets/sprites/EndScreen/Lose_0007.png" id="12_wcye0"]
 [ext_resource type="Texture2D" uid="uid://dvrglgyujjw4d" path="res://assets/sprites/EndScreen/Lose_0008.png" id="13_m2uou"]
 [ext_resource type="Texture2D" uid="uid://c8mbqor0rvi1t" path="res://assets/sprites/Ranks and score/Rank A Menu.png" id="15_8dxkd"]
+[ext_resource type="FontFile" uid="uid://c5rq3xegp38af" path="res://assets/Bubble.ttf" id="15_qiw67"]
 [ext_resource type="Texture2D" uid="uid://du8fl8sbi6as8" path="res://assets/sprites/Ranks and score/Rank B Menu.png" id="16_yhvc7"]
 [ext_resource type="Texture2D" uid="uid://osw2ca7yc8ci" path="res://assets/sprites/Ranks and score/Rank C Menu.png" id="17_soaly"]
 [ext_resource type="Texture2D" uid="uid://detrxg2d33566" path="res://assets/sprites/Ranks and score/Rank F Menu.png" id="18_iiiui"]
@@ -56,6 +57,10 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="LabelSettings" id="LabelSettings_utr57"]
+font = ExtResource("15_qiw67")
+font_size = 80
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xpiu8"]
 animations = [{
@@ -109,6 +114,17 @@ visible = false
 position = Vector2(-354, -16)
 scale = Vector2(0.671827, 0.671826)
 texture = ExtResource("4_2scqv")
+
+[node name="Label" type="Label" parent="Node/ScoreSprite"]
+visible = false
+offset_left = -239.645
+offset_top = -16.3733
+offset_right = 248.355
+offset_bottom = 63.6267
+text = "13246643"
+label_settings = SubResource("LabelSettings_utr57")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Ranks" type="Node" parent="Node"]
 

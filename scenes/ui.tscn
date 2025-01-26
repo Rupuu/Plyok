@@ -1,8 +1,6 @@
-[gd_scene load_steps=34 format=3 uid="uid://bywcv1ryjnjlo"]
+[gd_scene load_steps=35 format=3 uid="uid://v2quwsf7oss1"]
 
-
-[ext_resource type="Script" path="res://scripts/ui.gd" id="1_coljh"]
-
+[ext_resource type="Script" path="res://scenes/ui.gd" id="1_coljh"]
 [ext_resource type="Texture2D" uid="uid://dl6klhy1k23fa" path="res://assets/sprites/UI/UI.png" id="1_inn7l"]
 [ext_resource type="Texture2D" uid="uid://wkq7t6rdjmih" path="res://assets/sprites/Water Level/Water1.png" id="3_b5rdl"]
 [ext_resource type="Texture2D" uid="uid://c7frdectxv7nw" path="res://assets/sprites/Water Level/Water2.png" id="4_e6ab4"]
@@ -23,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bgdgpvky4rqbt" path="res://assets/sprites/Water Level/Water19.png" id="19_32cp1"]
 [ext_resource type="Texture2D" uid="uid://cfrj3um2xb3sv" path="res://assets/sprites/Water Level/Water20.png" id="20_h8jhs"]
 [ext_resource type="Texture2D" uid="uid://nlgsffvy37y8" path="res://assets/sprites/Water Level/Water21.png" id="21_c75bp"]
-[ext_resource type="PackedScene" uid="uid://dnjkx3epalgyt" path="res://scenes/hose.tscn" id="22_6ruwc"]
+[ext_resource type="PackedScene" path="res://scenes/hose.tscn" id="22_6ruwc"]
 [ext_resource type="Texture2D" uid="uid://b53uw6wnmnk0e" path="res://assets/sprites/Water Level/Water22.png" id="22_odej2"]
 [ext_resource type="Texture2D" uid="uid://ccw0c78wgjboq" path="res://assets/sprites/cleanup-sprite/Lose_0000.png" id="23_i4jy4"]
 [ext_resource type="Texture2D" uid="uid://bprdptasg7qhv" path="res://assets/sprites/cleanup-sprite/Lose_0001.png" id="24_6jjlq"]
@@ -145,6 +143,7 @@ animations = [{
 }]
 
 [node name="UI" type="Node2D"]
+script = ExtResource("1_coljh")
 
 [node name="Ui" type="Sprite2D" parent="."]
 position = Vector2(76, -61)
@@ -152,11 +151,6 @@ scale = Vector2(0.577519, 0.577519)
 texture = ExtResource("1_inn7l")
 
 [node name="HealthBar" type="AnimatedSprite2D" parent="."]
-position = Vector2(-4, -88)
-scale = Vector2(0.553846, 0.553846)
-sprite_frames = SubResource("SpriteFrames_hoq10")
-
-[node name="HealthBar2" type="AnimatedSprite2D" parent="."]
 position = Vector2(-4, -88)
 scale = Vector2(0.553846, 0.553846)
 sprite_frames = SubResource("SpriteFrames_hoq10")

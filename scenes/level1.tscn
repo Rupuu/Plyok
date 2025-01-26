@@ -4,14 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://dlyxvs2hkjynk" path="res://scenes/water_gun.tscn" id="1_5wikp"]
 [ext_resource type="Texture2D" uid="uid://cd8q2n72gieai" path="res://assets/sprites/BackgroundProto.png" id="2_irbwg"]
 [ext_resource type="PackedScene" uid="uid://bxpmg0gsukuib" path="res://scenes/bubble.tscn" id="3_1w46a"]
-[ext_resource type="PackedScene" uid="uid://i6lmgx67otxi" path="res://scenes/enemy_spawn_point.tscn" id="4_ijg0v"]
 [ext_resource type="PackedScene" uid="uid://cle3rtsq172nl" path="res://scenes/crosshair.tscn" id="6_ge6o1"]
 [ext_resource type="PackedScene" uid="uid://daxgto21xpqg3" path="res://scenes/exploding_bubble_spawn_point.tscn" id="6_ikqv2"]
-[ext_resource type="PackedScene" uid="uid://7a5d07jmundg" path="res://scenes/SquirtOver.tscn" id="10_awly5"]
 [ext_resource type="PackedScene" uid="uid://i6lmgx67otxi" path="res://scenes/enemy_spawn_point.tscn" id="6_lpctr"]
-[ext_resource type="PackedScene" path="res://scenes/score.tscn" id="7_cxvbs"]
-[ext_resource type="PackedScene" uid="uid://bywcv1ryjnjlo" path="res://scenes/ui.tscn" id="8_x2ayu"]
-
+[ext_resource type="PackedScene" uid="uid://bjqyx1cwuevgy" path="res://scenes/score.tscn" id="7_cxvbs"]
+[ext_resource type="PackedScene" uid="uid://v2quwsf7oss1" path="res://scenes/ui.tscn" id="8_x2ayu"]
+[ext_resource type="PackedScene" uid="uid://7a5d07jmundg" path="res://scenes/SquirtOver.tscn" id="10_awly5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5gqfj"]
 size = Vector2(10, 926)
@@ -37,6 +35,9 @@ position = Vector2(12, 52)
 [node name="Crosshair" parent="." instance=ExtResource("6_ge6o1")]
 z_index = 5
 
+[node name="UI" parent="." instance=ExtResource("8_x2ayu")]
+position = Vector2(-483, 243)
+
 [node name="Walls" type="StaticBody2D" parent="."]
 
 [node name="Left" type="CollisionShape2D" parent="Walls"]
@@ -55,10 +56,8 @@ shape = SubResource("RectangleShape2D_jr66a")
 position = Vector2(44, 322)
 shape = SubResource("RectangleShape2D_jr66a")
 
-
-[node name="ExplodingBubbleSpawnPoint" parent="EnemySpawners" instance=ExtResource("6_ikqv2")]
+[node name="EnemySpawners#ExplodingBubbleSpawnPoint" parent="." instance=ExtResource("6_ikqv2")]
 position = Vector2(-391, -232)
-
 
 [node name="BubbleSpawnPoint" parent="." instance=ExtResource("6_lpctr")]
 position = Vector2(621, -136)
@@ -72,16 +71,13 @@ position = Vector2(-618, -120)
 position = Vector2(-403, -75)
 scale = Vector2(1.25, 1.25)
 
-[node name="StartBubbles#Bubble2" parent="." instance=ExtResource("3_1w46a")]
+[node name="StartBubbles#Bubble2" parent="StartBubbles" instance=ExtResource("3_1w46a")]
 position = Vector2(256, 37)
 scale = Vector2(0.75, 0.75)
 
-[node name="StartBubbles#Bubble3" parent="." instance=ExtResource("3_1w46a")]
+[node name="StartBubbles#Bubble3" parent="StartBubbles" instance=ExtResource("3_1w46a")]
 position = Vector2(92, -166)
 scale = Vector2(0.5, 0.5)
-
-[node name="UI" parent="." instance=ExtResource("8_x2ayu")]
-position = Vector2(-483, 243)
 
 [node name="Score" parent="." instance=ExtResource("7_cxvbs")]
 visible = false
