@@ -12,6 +12,8 @@ var HEALTH_TIME_PENALTY = 1.5
 const HEALTH_MISS_PENALTY = 3
 const HEALTH_HIT_REWARD = 3
 
+var bubbles_popped = 0;
+
 func _ready():
 	var root = get_tree().root
 	# Using a negative index counts from the end, so this gets the last child node of `root`.

@@ -174,7 +174,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_dm2nv"]
 radius = 30.1496
 
-[node name="Bubble" type="CharacterBody2D"]
+[node name="Bubble" type="CharacterBody2D" groups=["BubbleEnemy"]]
 input_pickable = true
 motion_mode = 1
 script = ExtResource("1_inmyy")

@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://dnjkx3epalgyt"]
+
+[ext_resource type="Script" path="res://scripts/hose.gd" id="1_y2k7r"]
+[ext_resource type="Texture2D" uid="uid://bs7uuqfmr81ja" path="res://assets/sprites/Hose00.png" id="2_qgkn8"]
+[ext_resource type="Texture2D" uid="uid://cd4h8koxyhrj0" path="res://assets/sprites/Hose4.png" id="2_yefax"]
+[ext_resource type="Texture2D" uid="uid://d3goppu3r2q7q" path="res://assets/sprites/Hose3.png" id="3_up171"]
+[ext_resource type="Texture2D" uid="uid://4y2eteetok08" path="res://assets/sprites/Hose2.png" id="4_jaik2"]
+[ext_resource type="Texture2D" uid="uid://hasv0gjjvv6g" path="res://assets/sprites/Hose1.png" id="5_vrb2c"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aneh8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qgkn8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_yefax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_up171")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jaik2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vrb2c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Hose" type="Node2D"]
+script = ExtResource("1_y2k7r")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_top = -47.0
+offset_right = 283.0
+offset_bottom = 14.0
+disabled = true
+action_mode = 0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(134, -104)
+scale = Vector2(0.589147, 0.589147)
+sprite_frames = SubResource("SpriteFrames_aneh8")
+frame_progress = 0.356046
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

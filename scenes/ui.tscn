@@ -1,6 +1,5 @@
-[gd_scene load_steps=24 format=3 uid="uid://v2quwsf7oss1"]
+[gd_scene load_steps=34 format=3 uid="uid://bywcv1ryjnjlo"]
 
-[ext_resource type="Script" path="res://scenes/ui.gd" id="1_coljh"]
 [ext_resource type="Texture2D" uid="uid://dl6klhy1k23fa" path="res://assets/sprites/UI/UI.png" id="1_inn7l"]
 [ext_resource type="Texture2D" uid="uid://wkq7t6rdjmih" path="res://assets/sprites/Water Level/Water1.png" id="3_b5rdl"]
 [ext_resource type="Texture2D" uid="uid://c7frdectxv7nw" path="res://assets/sprites/Water Level/Water2.png" id="4_e6ab4"]
@@ -21,7 +20,17 @@
 [ext_resource type="Texture2D" uid="uid://bgdgpvky4rqbt" path="res://assets/sprites/Water Level/Water19.png" id="19_32cp1"]
 [ext_resource type="Texture2D" uid="uid://cfrj3um2xb3sv" path="res://assets/sprites/Water Level/Water20.png" id="20_h8jhs"]
 [ext_resource type="Texture2D" uid="uid://nlgsffvy37y8" path="res://assets/sprites/Water Level/Water21.png" id="21_c75bp"]
+[ext_resource type="PackedScene" uid="uid://dnjkx3epalgyt" path="res://scenes/hose.tscn" id="22_6ruwc"]
 [ext_resource type="Texture2D" uid="uid://b53uw6wnmnk0e" path="res://assets/sprites/Water Level/Water22.png" id="22_odej2"]
+[ext_resource type="Texture2D" uid="uid://ccw0c78wgjboq" path="res://assets/sprites/cleanup-sprite/Lose_0000.png" id="23_i4jy4"]
+[ext_resource type="Texture2D" uid="uid://bprdptasg7qhv" path="res://assets/sprites/cleanup-sprite/Lose_0001.png" id="24_6jjlq"]
+[ext_resource type="Texture2D" uid="uid://cpp5tkw25ein3" path="res://assets/sprites/cleanup-sprite/Lose_0002.png" id="25_87ckv"]
+[ext_resource type="Texture2D" uid="uid://dxhh422a2p4lg" path="res://assets/sprites/cleanup-sprite/Lose_0003.png" id="26_srco2"]
+[ext_resource type="Texture2D" uid="uid://21ea2debqma5" path="res://assets/sprites/cleanup-sprite/Lose_0004.png" id="27_gmpq2"]
+[ext_resource type="Texture2D" uid="uid://3vfjtx7wyn65" path="res://assets/sprites/cleanup-sprite/Lose_0005.png" id="28_r0yqr"]
+[ext_resource type="Texture2D" uid="uid://cv1mp0l88yy5l" path="res://assets/sprites/cleanup-sprite/Lose_0006.png" id="29_omu3y"]
+[ext_resource type="Texture2D" uid="uid://bogfsfr4f8jpr" path="res://assets/sprites/cleanup-sprite/Lose_0007.png" id="30_lbwfh"]
+[ext_resource type="Texture2D" uid="uid://dujvjwuietbnm" path="res://assets/sprites/cleanup-sprite/Lose_0008.png" id="31_gbxcc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hoq10"]
 animations = [{
@@ -91,8 +100,48 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_4icu5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_i4jy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_6jjlq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_87ckv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_srco2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_gmpq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_r0yqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_omu3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_lbwfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_gbxcc")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
 [node name="UI" type="Node2D"]
-script = ExtResource("1_coljh")
 
 [node name="Ui" type="Sprite2D" parent="."]
 position = Vector2(76, -61)
@@ -108,3 +157,12 @@ sprite_frames = SubResource("SpriteFrames_hoq10")
 position = Vector2(-4, -88)
 scale = Vector2(0.553846, 0.553846)
 sprite_frames = SubResource("SpriteFrames_hoq10")
+
+[node name="Hose" parent="." instance=ExtResource("22_6ruwc")]
+position = Vector2(-57, 43)
+
+[node name="CleanAnimation" type="AnimatedSprite2D" parent="."]
+z_index = 10
+position = Vector2(708, -322)
+scale = Vector2(0.956132, 0.9675)
+sprite_frames = SubResource("SpriteFrames_4icu5")

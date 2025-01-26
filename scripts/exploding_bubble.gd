@@ -56,6 +56,7 @@ func trigger_death():
 
 # Play the death animation and queue the node for removal
 func trigger_death_animation():
+	Global.bubbles_popped+=1
 	animation_player.play("pop")
 	# Wait for the animation to finish using a signal
 	animation_player.animation_finished.connect(_on_death_animation_finished)
