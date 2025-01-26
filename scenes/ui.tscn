@@ -27,64 +27,64 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_b5rdl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_e6ab4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_a1y3p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_htqsx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_xdbdj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_mr15g")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_nphyy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_ov0ik")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_flpgh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_sens2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_hbs03")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_jy6sj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_0hf3k")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_nq0xx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_j0nac")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_ahts1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_32cp1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_h8jhs")
+"texture": ExtResource("22_odej2")
 }, {
 "duration": 1.0,
 "texture": ExtResource("21_c75bp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("22_odej2")
+"texture": ExtResource("20_h8jhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_32cp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ahts1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_j0nac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_nq0xx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_0hf3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_jy6sj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hbs03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_sens2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_flpgh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ov0ik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_nphyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mr15g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xdbdj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_htqsx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_a1y3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_e6ab4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_b5rdl")
 }],
 "loop": false,
 "name": &"default",
@@ -99,7 +99,12 @@ position = Vector2(76, -61)
 scale = Vector2(0.577519, 0.577519)
 texture = ExtResource("1_inn7l")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="HealthBar" type="AnimatedSprite2D" parent="."]
+position = Vector2(-4, -88)
+scale = Vector2(0.553846, 0.553846)
+sprite_frames = SubResource("SpriteFrames_hoq10")
+
+[node name="HealthBar2" type="AnimatedSprite2D" parent="."]
 position = Vector2(-4, -88)
 scale = Vector2(0.553846, 0.553846)
 sprite_frames = SubResource("SpriteFrames_hoq10")

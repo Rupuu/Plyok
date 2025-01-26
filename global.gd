@@ -7,8 +7,8 @@ var combo = -1
 var enemy_count = 3;
 var timeElapsedSinceClick = 0.01
 
-var health = 100.00;
-const HEALTH_TIME_PENALTY = 1.5
+var health = 95.00;
+var HEALTH_TIME_PENALTY = 1.5
 const HEALTH_MISS_PENALTY = 3
 const HEALTH_HIT_REWARD = 3
 
