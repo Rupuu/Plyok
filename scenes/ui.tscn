@@ -1,5 +1,8 @@
 [gd_scene load_steps=34 format=3 uid="uid://bywcv1ryjnjlo"]
 
+
+[ext_resource type="Script" path="res://scripts/ui.gd" id="1_coljh"]
+
 [ext_resource type="Texture2D" uid="uid://dl6klhy1k23fa" path="res://assets/sprites/UI/UI.png" id="1_inn7l"]
 [ext_resource type="Texture2D" uid="uid://wkq7t6rdjmih" path="res://assets/sprites/Water Level/Water1.png" id="3_b5rdl"]
 [ext_resource type="Texture2D" uid="uid://c7frdectxv7nw" path="res://assets/sprites/Water Level/Water2.png" id="4_e6ab4"]

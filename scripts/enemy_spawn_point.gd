@@ -14,3 +14,5 @@ func _on_timer_timeout():
 		var enemy = enemy_scene.instantiate()
 		enemy.position = position
 		get_parent().add_child(enemy)
+	if(Global.game_over):
+		queue_free()

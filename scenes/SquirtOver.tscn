@@ -1,0 +1,152 @@
+[gd_scene load_steps=21 format=3 uid="uid://7a5d07jmundg"]
+
+[ext_resource type="Texture2D" uid="uid://cutrxhihnaf5s" path="res://assets/sprites/EndMenu/MapMenu.png" id="1_ss16c"]
+[ext_resource type="Script" path="res://scripts/squirt_over.gd" id="1_xv4ut"]
+[ext_resource type="Texture2D" uid="uid://c52nic1itcbs0" path="res://assets/sprites/EndMenu/QuitMenu.png" id="2_f4his"]
+[ext_resource type="Texture2D" uid="uid://ctsp52qrxjiaa" path="res://assets/sprites/EndMenu/GameWonMenu.png" id="3_dengw"]
+[ext_resource type="Texture2D" uid="uid://wnfv2jqfoet8" path="res://assets/sprites/EndMenu/Empty Meny.png" id="4_2scqv"]
+[ext_resource type="Texture2D" uid="uid://bjiqe81xblhja" path="res://assets/sprites/EndScreen/Lose_0000.png" id="5_5x4km"]
+[ext_resource type="Texture2D" uid="uid://bdx4i0j26xr4a" path="res://assets/sprites/EndScreen/Lose_0001.png" id="6_qpok0"]
+[ext_resource type="Texture2D" uid="uid://dmokxnyx6t7sk" path="res://assets/sprites/EndScreen/Lose_0002.png" id="7_bnxg1"]
+[ext_resource type="Texture2D" uid="uid://dwv62id1e6c7w" path="res://assets/sprites/EndScreen/Lose_0003.png" id="8_8udaj"]
+[ext_resource type="Texture2D" uid="uid://c83tb6ia78py5" path="res://assets/sprites/EndScreen/Lose_0004.png" id="9_c61ed"]
+[ext_resource type="Texture2D" uid="uid://r075aljd501j" path="res://assets/sprites/EndScreen/Lose_0005.png" id="10_c51vv"]
+[ext_resource type="Texture2D" uid="uid://blees0eyxcccu" path="res://assets/sprites/EndScreen/Lose_0006.png" id="11_r5lf2"]
+[ext_resource type="Texture2D" uid="uid://b361s00xijrpy" path="res://assets/sprites/EndScreen/Lose_0007.png" id="12_wcye0"]
+[ext_resource type="Texture2D" uid="uid://dvrglgyujjw4d" path="res://assets/sprites/EndScreen/Lose_0008.png" id="13_m2uou"]
+[ext_resource type="Texture2D" uid="uid://c8mbqor0rvi1t" path="res://assets/sprites/Ranks and score/Rank A Menu.png" id="15_8dxkd"]
+[ext_resource type="Texture2D" uid="uid://du8fl8sbi6as8" path="res://assets/sprites/Ranks and score/Rank B Menu.png" id="16_yhvc7"]
+[ext_resource type="Texture2D" uid="uid://osw2ca7yc8ci" path="res://assets/sprites/Ranks and score/Rank C Menu.png" id="17_soaly"]
+[ext_resource type="Texture2D" uid="uid://detrxg2d33566" path="res://assets/sprites/Ranks and score/Rank F Menu.png" id="18_iiiui"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o0uau"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5x4km")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qpok0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bnxg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8udaj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_c61ed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_c51vv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_r5lf2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wcye0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_m2uou")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xpiu8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_8dxkd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_yhvc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_soaly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_iiiui")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="SquirtOver" type="Node2D"]
+script = ExtResource("1_xv4ut")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(7, 0)
+sprite_frames = SubResource("SpriteFrames_o0uau")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="MapSprite" type="Sprite2D" parent="Node"]
+visible = false
+position = Vector2(-225, 190)
+scale = Vector2(0.690069, 0.690069)
+texture = ExtResource("1_ss16c")
+
+[node name="QuitSprite" type="Sprite2D" parent="Node"]
+visible = false
+position = Vector2(234, 190)
+scale = Vector2(0.749226, 0.749226)
+texture = ExtResource("2_f4his")
+
+[node name="GameWonMenu" type="Sprite2D" parent="Node"]
+visible = false
+position = Vector2(-4, -250)
+scale = Vector2(0.690402, 0.690403)
+texture = ExtResource("3_dengw")
+
+[node name="ScoreSprite" type="Sprite2D" parent="Node"]
+visible = false
+position = Vector2(-354, -16)
+scale = Vector2(0.671827, 0.671826)
+texture = ExtResource("4_2scqv")
+
+[node name="Ranks" type="Node" parent="Node"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node/Ranks"]
+visible = false
+position = Vector2(343, -9)
+scale = Vector2(0.705426, 0.705426)
+sprite_frames = SubResource("SpriteFrames_xpiu8")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -1172.0
+offset_top = -868.0
+offset_right = 1300.0
+offset_bottom = 786.0
+color = Color(0, 0, 0, 0.372549)
+
+[node name="QuitButton" type="Button" parent="."]
+visible = false
+offset_left = 36.0
+offset_top = 137.0
+offset_right = 446.0
+offset_bottom = 275.0
+focus_mode = 0
+theme_type_variation = &"FlatButton"
+
+[node name="MapButton" type="Button" parent="."]
+visible = false
+offset_left = -420.0
+offset_top = 148.0
+offset_right = -20.0
+offset_bottom = 266.0
+focus_mode = 0
+theme_type_variation = &"FlatButton"
+
+[connection signal="mouse_entered" from="QuitButton" to="." method="_on_quit_button_mouse_entered"]
+[connection signal="mouse_exited" from="QuitButton" to="." method="_on_quit_button_mouse_exited"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="mouse_entered" from="MapButton" to="." method="_on_map_button_mouse_entered"]
+[connection signal="mouse_exited" from="MapButton" to="." method="_on_map_button_mouse_exited"]
+[connection signal="pressed" from="MapButton" to="." method="_on_map_button_pressed"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cle3rtsq172nl"]
+[gd_scene load_steps=5 format=3 uid="uid://cle3rtsq172nl"]
 
 [ext_resource type="Script" path="res://scripts/crosshair.gd" id="1_hlt4i"]
 [ext_resource type="Texture2D" uid="uid://ctcscups3ggdp" path="res://assets/sprites/weapon-sprites/Crosshair.png" id="2_k3tab"]
+[ext_resource type="Script" path="res://scripts/area_2d.gd" id="2_s7pqh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2lpwx"]
 radius = 36.0139
@@ -10,6 +11,7 @@ radius = 36.0139
 script = ExtResource("1_hlt4i")
 
 [node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_s7pqh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_2lpwx")
